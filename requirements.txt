@@ -1,0 +1,6 @@
+pywin32>=304
+openpyxl>=3.0.10
+pandas>=1.4.3
+googlemaps>=4.6.0
+haversine>=2.6.0
+requests>=2.28.1

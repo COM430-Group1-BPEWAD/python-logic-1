@@ -1,0 +1,5 @@
+env/
+__pycache__/
+.gitattributes
+notes.md
+git_commands.txt
