@@ -8,10 +8,10 @@ class login(forms.Form):
 # Form for entering initial patient information. Intended for signup.html
 class signupform(forms.Form):
     uName = forms.CharField(label="Username", max_length=30)
-    password = forms.CharField(label="Password", max_length=30)
+    password = forms.CharField(label="Password", max_length=30, )
     email = forms.EmailField(label="Email Address")
+    phone = forms.CharField(label="Phone number", min_length=10, max_length=10)
     fName = forms.CharField(label="First Name", max_length=30)
     lName = forms.CharField(label="Last Name", max_length=30)
-    dob = forms.DateField(label="Date of Birth")
-    height = forms.IntegerField(label="Height (ft.)", min_value=1, max_value=7, initial=4)
-    height2 = forms.IntegerField(label="", min_value=0, max_value=11, initial=0)
+    address = forms.CharField(label="Address", max_length=60)
+    allergies = forms.CharField(label="Allergies", max_length=60)
