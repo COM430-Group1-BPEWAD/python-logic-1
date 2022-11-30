@@ -15,3 +15,7 @@ class signupform(forms.Form):
     lName = forms.CharField(label="Last Name", max_length=30)
     address = forms.CharField(label="Address", max_length=60)
     allergies = forms.CharField(label="Allergies", max_length=60)
+
+class bloodPressureForm(forms.Form):
+    systolic = forms.IntegerField(label = "Systolic reading (upper number)")
+    diastolic = forms.IntegerField(label = "Diastolic reading (lower number)")

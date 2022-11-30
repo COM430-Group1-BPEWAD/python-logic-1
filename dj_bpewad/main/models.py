@@ -15,3 +15,8 @@ class patient(models.Model):
     phone = models.CharField(max_length=10)
     allergies = models.CharField(max_length=60)
     #doctor = models.ForeignKey(doctor, on_delete=models.CASCADE, default=0)
+
+class bpReadings(models.Model):
+    patient_id = models.ForeignKey(patient, on_delete=models.CASCADE)
+    diastolic = models.IntegerField()
+    systolic = models.IntegerField()

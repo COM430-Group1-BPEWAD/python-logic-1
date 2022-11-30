@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>New Blood Pressure Reading</title>
+    </head>
+    <body>
+        <h1>New Reading for {{ patient.firstName }}</h1>
+        <form method="post" action="../{{ patient.id }}/report/">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit", name="Submit">Record reading</button>
+        </form>
+    </body>
+</html>

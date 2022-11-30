@@ -6,7 +6,13 @@ urlpatterns = [
     path("login", views.index, name="index"),
     path("signup", views.signup, name="signup"),            # Links to the Signup Page
     path("create/", views.createAccount, name="Logged In"),
-    path("test", views.viewPanel),                          # Test links to the User Panel
     path("test2", views.surveyform, name="survey"),         # Test links to the Survey
-    path('patient/<int:patient_id>/information', views.patientInfoView, name="Personal details")
+    path('patient/information/', views.patientInfoView, name="Personal details"),
+    path('patient/<int:id>/information', views.patientIdInfoView, name="Personal details"),
+    path('patient/<int:id>/new-reading', views.newReading, name="New Blood Pressure Reading"),
+    path('patient/<int:id>/report/', views.recordBP),
+    path('patient/<int:id>/emt', views.emt),
+    path('patient/<int:id>/emergency', views.emergency),
+    path('patient/<int:id>/history', views.history),
+    path('patient/<int:id>/panel', views.viewPanel, name="Patient Dash")
 ]

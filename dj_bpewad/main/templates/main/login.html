@@ -3,10 +3,10 @@
 <head>
     <title>Test</title>
 </head>
-{% csrf_token %}
 <body>
     <p>Log In</p>
-    <form method="post" action="/create/">
+    <form method="post" action="patient/information/">
+        {% csrf_token %}
         {{form}}
         <button type="submit", name="Submit">Log In</button>
     </form>
