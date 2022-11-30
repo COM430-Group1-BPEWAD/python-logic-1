@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>Signup</title>
+</head>
+
+<body>
+    <p>Base Template</p>
+    <form method="post" action="/create/">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit", name="Submit">Sign Up</button>
+    </form>
+
+</body>
+
+</html>
