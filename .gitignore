@@ -3,3 +3,4 @@ __pycache__/
 .gitattributes
 notes.md
 git_commands.txt
+admin_creds.txt

@@ -1,0 +1,17 @@
+<html>
+
+    <head>
+        <title>New User Registration</title>
+    </head>
+
+    <body>
+        <p>New User Registration</p>
+        <form method="post" action="create/">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit", name="Submit">Sign Up</button>
+        </form>
+        <input type="button" onclick="window.location.href='accounts/login'" value="Cancel"/>
+    </body>
+
+</html>

@@ -1,0 +1,6 @@
+django.db.utils.OperationalError: no such table: auth_user
+
+answer: 
+
+python manage.py migrate
+python manage.py createsuperuser

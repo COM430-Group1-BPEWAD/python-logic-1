@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>BPEWAD Login</title>
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    
+    {% block title %}Log in{% endblock %}
+
+    {% block content %}
+    <form method="post"> <!--action="patient/information/"> -->
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit", name="Submit">Log In</button>
+    </form>
+    
+    <input type="button" onclick="window.location.href='/signup'" value="Sign Up"/>
+    <input type="button" onclick="window.location.href='/registration_survey'" value="Survey"/>
+    {% endblock %}
+</body>
+
+</html>
+

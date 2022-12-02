@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Reading History</title>
+    </head>
+    <body>
+        <h1>Reading history for {{ patient.fistName }}</h1>
+        <a href="../{{ patient.id }}/panel">Return to dashboard</a>
+        <table>
+            <tr>
+                <th>Systolic</th>
+                <th>Diastolic</th>
+            </tr>
+            {% for reading in bpReadings %}
+            <tr>
+                <td>{{ reading.systolic }}</td>
+                <td>{{ reading.diastolic }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

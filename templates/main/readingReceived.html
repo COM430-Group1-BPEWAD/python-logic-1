@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Thank you for the reading</title>
+    </head>
+    <body>
+        {% if diastolic <= 69 or systolic <= 121 or systolic >= 150 or diastolic >= 90 %}
+        <h1>Are you OK?</h1>
+        <a href="../panel">Yes</a>
+        <a href="../emt">No</a>
+        {% endif %}
+        Thank you for your reporting
+    </body>
+</html>

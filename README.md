@@ -7,6 +7,7 @@
 -       Jyothi Cameron: Project Manager / Team Lead
 -       Matthew Delva: Release Manager / Software Architect
 -       Richard Johnston: Primary Developer / Tester
+-       Austin Strand: Additional Developer
 -       Derek Perkins: Secondary developer / Documentation
 -       Abdulla Almarri: Secondary Developer / Documentation
 
@@ -17,5 +18,7 @@ Actions include:
 -    Alerting the patient about the risk of hypertension or asking them if they need to contact 911 for emergency service.
 
 ## Usage
-1. TBD.
+1. run `pip install -r requirements.txt`
+2. CD into dj_bpewad
+3. run `python manage.py runserver`
 

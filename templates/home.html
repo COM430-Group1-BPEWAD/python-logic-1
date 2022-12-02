@@ -1,0 +1,40 @@
+<!-- templates/home.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}User Home View{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+        <body>
+            <h1>User View Control Panel</h1>
+            <ul>
+                <li><a href="../{{ patient.id }}/new-reading">New Blood Pressure</a></li>
+                <li><a href="../{{ patient.id }}/history">View History</a></li>
+                <li><a href="../{{ patient.id }}/information" method Profile>View Profile</a></li>  <!-- has past alerts? -->
+            </ul>
+        </body>
+        <input type="button" onclick="window.location.href='accounts/login'" value="Log Out"/>
+    {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+{% endblock %}
+
+<html>
+
+    <head>
+        <title>User View</title>
+    </head>
+    {% csrf_token %}
+    <body>
+        <h1>{{ patient.firstName }}'s Control Panel</h1>
+        <ul>
+            
+            
+            <li><a href="login">Log Out</a></li>
+        </ul>
+    </body>
+
+</html>
