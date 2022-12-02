@@ -83,3 +83,6 @@ def history(request, id):
 #Goes to the Survey. Currently static HTML
 def surveyform(response):
     return render(response, "main/survey.html")
+
+def logout(response):
+    return HttpResponseRedirect("../login")
