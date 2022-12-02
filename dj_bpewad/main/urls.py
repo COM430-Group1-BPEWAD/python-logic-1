@@ -8,6 +8,7 @@ urlpatterns = [
     path("create/", views.createAccount, name="Logged In"),
     path("test2", views.surveyform, name="survey"),         # Test links to the Survey
     path('patient/information/', views.patientInfoView, name="Personal details"),
+    path('patient/logout', views.logout, name="Log out"),
     path('patient/<int:id>/information', views.patientIdInfoView, name="Personal details"),
     path('patient/<int:id>/new-reading', views.newReading, name="New Blood Pressure Reading"),
     path('patient/<int:id>/report/', views.recordBP),

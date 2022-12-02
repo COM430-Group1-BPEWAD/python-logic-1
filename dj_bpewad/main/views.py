@@ -5,6 +5,7 @@ from .forms import login, signupform, bloodPressureForm
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from .models import patient, bpReadings
 from django.shortcuts import get_object_or_404, get_list_or_404
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -38,7 +39,7 @@ def createAccount(response):
         allergies=response.POST['allergies']
     )
     newPatient.save()
-    return render(response, "main/panel.html")
+    return HttpResponseRedirect("../login")
 
 def patientInfoView(request):
     print(request.POST)
@@ -82,3 +83,6 @@ def history(request, id):
 #Goes to the Survey. Currently static HTML
 def surveyform(response):
     return render(response, "main/survey.html")
+
+def logout(response):
+    return HttpResponseRedirect("../login")
