@@ -22,3 +22,13 @@ Actions include:
 2. CD into dj_bpewad
 3. run `python manage.py runserver`
 
+## Admin usage
+### Logging on to admin
+1. Go to http://127.0.0.1:8000/admin
+2. Log on with an admin account
+
+### Creating an admin account
+1. Use Ctrl+c to cancel the running Django instance
+2. run `python manage.py createsuperuser`
+3. Follow the prompts to create an admin account
+4. run `python manage.py runserver` to start Django
