@@ -1,9 +1,23 @@
 <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="utf-8">
         <title>Reading History</title>
     </head>
+    <style>
+    body{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left:20%;
+        margin-right:20%;
+        background-color: aqua;
+        padding :1%;
+        border : 2px solid black;
+    }
+    </style>
     <body>
         <h1>Reading history for {{ patient.fistName }}</h1>
+        <br>
         <a href="../{{ patient.id }}/panel">Return to dashboard</a>
         <table>
             <tr>

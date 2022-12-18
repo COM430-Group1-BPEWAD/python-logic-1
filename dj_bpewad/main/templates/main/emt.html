@@ -1,9 +1,27 @@
 <html>
     <head>
-        <title>Are you OK</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Caution! High BP detected</title>
+        <style>
+        body{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            margin-left:25%;
+            margin-right:25%;
+            background-color: yellow;
+            padding :2%;
+            border : 2px dotted black;
+            text-align: center;
+        }
+    </style>
     </head>
     <body>
-        <h1>Do you need emergency services?</h1>
+        <h1>Caution! Elevated Pressure detected.</h1>
+        <h3>If you experience any discomfort, relax and take a breather.</h3>
+        <h3>If symptoms persist, contact emergency services or your doctor.</h3>
+        <br><br><br>
+        <h4>Do you want to contact Emergency services?</h4>
         <a href="../{{ patient.id }}/emergency">Yes</a>
         <a href="../{{ patient.id }}/panel">No</a>
     </body>

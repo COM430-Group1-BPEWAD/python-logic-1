@@ -1,9 +1,28 @@
 <html>
     <head>
-        <title>Are you OK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="utf-8">
+        <title>Emts are on the way.</title>
+        <style>
+            body{
+                margin-top: 10%;
+                margin-bottom: 10%;
+                margin-left:25%;
+                margin-right:25%;
+                background-color: Blue;
+                padding :2%;
+                border : 2px dotted black;
+                text-align: center;
+            }
+            a{
+                color: black;
+            }
+        </style>
     </head>
     <body>
         <h1>Emergency Services have been notified</h1>
+        <br><br><br>
+        <h2>Make sure you sit down and be in a place easy to see and accessible.<h2>
         <a href="../{{ patient.id }}/panel">Return to dashboard</a>
     </body>
 </html>

@@ -1,10 +1,24 @@
 <html>
     <head>
-        <title>Thank you for the reading</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	    <meta charset="utf-8">
+        <title>Reading recorded</title>
+        <style>
+            body{
+                margin-top: 10%;
+                margin-bottom: 10%;
+                margin-left:25%;
+                margin-right:25%;
+                background-color: aqua;
+                padding :1%;
+                border : 2px dashed black;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         {% if diastolic <= 69 or systolic <= 121 or systolic >= 150 or diastolic >= 90 %}
-        <h1>Are you OK?</h1>
+        <h1>Are you feeling OK?</h1>
         <a href="../panel">Yes</a>
         <a href="../emt">No</a>
         {% endif %}

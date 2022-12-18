@@ -1,16 +1,43 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	    <meta charset="utf-8">
         <title>Patient Information</title>
+        <style>
+            body{
+                margin-top: 8%;
+                margin-bottom: 10%;
+                margin-left:25%;
+                margin-right:25%;
+                background-color: aqua;
+                padding :1%;
+                border : 2px solid black;
+                text-align: center;
+            }
+            ul { display: flex;
+                flex-direction: column;
+                font-size: 1.25em;
+                list-style-type: none;
+                margin: 0;
+                padding: 0; }
+            li {
+                padding: .5em 1em;
+               width: 100%; }
+        </style>
     </head>
+
+    <body>
     {% csrf_token %}
      <h1>Information for {{ patient.firstName }}</h1>
      <ul>
          <li>First Name: {{ patient.firstName }}</li>
          <li>Last Name: {{ patient.lastName }}</li>
          <li>Email: {{ patient.email }}</li>
-         <li>Patient Address: {{ patient.address }}</li>
+         <li>Your Address: {{ patient.address }}</li>
          <li>{{ patient.firstName }}'s allergies: {{ patient.allergies }}</li>
          <li>User Name: {{ patient.patientUserName }}</li>
      </ul>
-     <a href="../{{ patient.id }}/panel">Panel</a>
+     <br>
+     <a href="../{{ patient.id }}/panel">Back to Panel</a>
+    </body>
 </html>

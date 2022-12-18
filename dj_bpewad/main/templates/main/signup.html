@@ -1,15 +1,42 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="utf-8">
     <title>Signup</title>
+    <style> 
+        body{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            margin-left:30%;
+            margin-right:30%;
+            background-color: aqua;
+            padding :1%;
+            border : 2px solid black;
+        }
+        label{
+            display: inline-block;
+            float: left;
+            clear: left;
+            width: 20%;
+        }
+        input{
+            display: inline-block;
+            float: left;
+        }
+        .submit_btn{
+            display: inline-block;
+            float: left;
+        }
+    </style>
 </head>
 
 <body>
-    <p>Base Template</p>
+    <h2>New User Registration</h2>
     <form method="post" action="/create/">
         {% csrf_token %}
         {{form}}
-        <button type="submit", name="Submit">Sign Up</button>
+        <button type="submit", name="Submit" class="submit_btn">Sign Up</button>
     </form>
 
 </body>
